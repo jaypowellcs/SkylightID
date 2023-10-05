@@ -9,10 +9,10 @@ import { ContactComponent } from './Pages/contact/contact.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path:'home', component: HomeComponent},
-  {path:'identify-component', component: IdentifyComponent},
-  {path:'skylightcal-component', component: SkylightCalComponent},
-  {path:'blog-component', component: BlogComponent},
-  {path:'contact-component', component:ContactComponent},
+  {path:'identify', component: IdentifyComponent},
+  {path:'skylightcal', component: SkylightCalComponent},
+  {path:'blog', component: BlogComponent},
+  {path:'contact', component:ContactComponent},
 
 ];
 
