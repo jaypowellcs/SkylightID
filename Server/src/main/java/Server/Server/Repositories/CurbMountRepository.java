@@ -1,4 +1,7 @@
 package Server.Server.Repositories;
 
-public interface CurbMountRepository {
+import Server.Server.Models.CurbMount;
+import org.springframework.data.repository.CrudRepository;
+
+public interface CurbMountRepository extends CrudRepository<CurbMount, Integer> {
 }
