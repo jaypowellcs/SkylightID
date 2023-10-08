@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { IdentifyComponent } from './Pages/identify/identify.component';
 import { SkylightCalComponent } from './Pages/skylight-cal/skylight-cal.component';
 import { BlogComponent } from './Pages/blog/blog.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { IdentifycurbComponent } from './Components/identifycurb/identifycurb.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { ContactComponent } from './Pages/contact/contact.component';
     IdentifyComponent,
     SkylightCalComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    IdentifycurbComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
