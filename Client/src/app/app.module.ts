@@ -9,9 +9,10 @@ import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { IdentifyComponent } from './Pages/identify/identify.component';
 import { SkylightCalComponent } from './Pages/skylight-cal/skylight-cal.component';
-import { BlogComponent } from './Pages/blog/blog.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { IdentifycurbComponent } from './Components/identifycurb/identifycurb.component';
+import { IdentifyselfflashComponent } from './Components/identifyselfflash/identifyselfflash.component';
+import { IdentifydeckComponent } from './Components/identifydeck/identifydeck.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,10 @@ import { IdentifycurbComponent } from './Components/identifycurb/identifycurb.co
     HomeComponent,
     IdentifyComponent,
     SkylightCalComponent,
-    BlogComponent,
     ContactComponent,
-    IdentifycurbComponent
+    IdentifycurbComponent,
+    IdentifyselfflashComponent,
+    IdentifydeckComponent
   ],
   imports: [
     BrowserModule,
