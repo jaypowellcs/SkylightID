@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { CurbmountService } from 'src/app/Services/curbmount.service';
-import { CurbMount } from 'src/app/Models/curbmount.model';
+import { DeckmountService } from 'src/app/Services/deckmount.service';
+import { DeckMount } from 'src/app/Models/deckmount.model';
 
 @Component({
   selector: 'app-identifydeck',
@@ -9,14 +9,14 @@ import { CurbMount } from 'src/app/Models/curbmount.model';
   styleUrls: ['./identifydeck.component.css']
 })
 export class IdentifydeckComponent implements OnInit {
-  curbMount?: CurbMount[];
+  deckMount?: DeckMount[];
 
-  constructor(private curbMountService: CurbmountService) {}
+  constructor(private deckMountService: DeckmountService) {}
 
   ngOnInit() {
-    this.curbMountService.getAll().subscribe({
+    this.deckMountService.getAll().subscribe({
       next: (data) => {
-        this.curbMount = data;
+        this.deckMount = data;
         console.log(data);
       },
       error: (e) => console.error(e),

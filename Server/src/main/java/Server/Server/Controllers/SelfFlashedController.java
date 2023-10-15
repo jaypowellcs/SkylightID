@@ -1,7 +1,6 @@
 package Server.Server.Controllers;
 
 
-import Server.Server.Models.DeckMount;
 import Server.Server.Models.SelfFlashed;
 import Server.Server.Repositories.SelfFlashedRepository;
 import org.springframework.beans.factory.annotation.Autowired;

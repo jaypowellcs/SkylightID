@@ -1,9 +1,7 @@
 package Server.Server.Controllers;
 
 
-import Server.Server.Models.CurbMount;
 import Server.Server.Models.DeckMount;
-import Server.Server.Repositories.CurbMountRepository;
 import Server.Server.Repositories.DeckMountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

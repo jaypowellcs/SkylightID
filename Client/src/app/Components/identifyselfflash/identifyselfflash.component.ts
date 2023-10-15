@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { CurbmountService } from 'src/app/Services/curbmount.service';
-import { CurbMount } from 'src/app/Models/curbmount.model';
+import { SelfFlashed } from 'src/app/Models/selfflashed.mount';
+import { SelfflashedService } from 'src/app/Services/selfflashed.service';
 
 @Component({
   selector: 'app-identifyselfflash',
@@ -9,14 +9,14 @@ import { CurbMount } from 'src/app/Models/curbmount.model';
   styleUrls: ['./identifyselfflash.component.css']
 })
 export class IdentifyselfflashComponent implements OnInit {
-  curbMount?: CurbMount[];
+  selfFlashed?: SelfFlashed[];
 
-  constructor(private curbMountService: CurbmountService) {}
+  constructor(private selfFlashedService: SelfflashedService) {}
 
   ngOnInit() {
-    this.curbMountService.getAll().subscribe({
+    this.selfFlashedService.getAll().subscribe({
       next: (data) => {
-        this.curbMount = data;
+        this.selfFlashed = data;
         console.log(data);
       },
       error: (e) => console.error(e),

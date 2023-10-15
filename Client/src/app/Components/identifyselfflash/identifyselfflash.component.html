@@ -118,20 +118,20 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let curbmount of curbMount">
+            <tr *ngFor="let selfflashed of selfFlashed">
               <td class="border border-slate-300 ...">
-                {{ curbmount.size_code }}
+                {{ selfflashed.size_code }}
               </td>
               <td class="border border-slate-300 ...">
-                {{ curbmount.outside_curb_width }}" x
-                {{ curbmount.outside_curb_height }}"
+                {{ selfflashed.outside_frame_width }}" x
+                {{ selfflashed.outside_frame_width }}"
               </td>
               <td class="border border-slate-300 ...">
-                {{ curbmount.max_sky_clear_width }}" x
-                {{ curbmount.max_sky_clear_height }}"
+                {{ selfflashed.rough_opening_width}}" x
+                {{ selfflashed.rough_opening_width}}"
               </td>
               <td class="border border-slate-300 ...">
-                {{ curbmount.glass_code }}
+                {{ selfflashed.glass_code }}
               </td>
             </tr>
           </tbody>
