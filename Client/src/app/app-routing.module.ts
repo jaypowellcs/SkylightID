@@ -7,6 +7,9 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { IdentifycurbComponent } from './Components/identifycurb/identifycurb.component';
 import { IdentifyselfflashComponent } from './Components/identifyselfflash/identifyselfflash.component';
 import { IdentifydeckComponent } from './Components/identifydeck/identifydeck.component';
+import { SelfcalComponent } from './Components/selfcal/selfcal.component';
+import { CurbcalComponent } from './Components/curbcal/curbcal.component';
+import { DeckcalComponent } from './Components/deckcal/deckcal.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,9 +19,10 @@ const routes: Routes = [
   {path:'contact', component:ContactComponent},
   {path:'curbmount', component:IdentifycurbComponent},
   {path:'selfflash', component: IdentifyselfflashComponent},
-  {path:'deck', component:IdentifydeckComponent}
-
-
+  {path:'deck', component:IdentifydeckComponent},
+  {path:'selfcal', component:SelfcalComponent},
+  {path:'deckcal', component:DeckcalComponent},
+  {path:'curbcal', component:CurbcalComponent},
 ];
 
 @NgModule({

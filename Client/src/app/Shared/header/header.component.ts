@@ -10,6 +10,7 @@ export class HeaderComponent {
 
   // Initialization for ES Users
   showMenu = false;
+
   toggleNavbar(){
     this.showMenu = !this.showMenu;
   }

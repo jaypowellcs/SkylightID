@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,12 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { IdentifycurbComponent } from './Components/identifycurb/identifycurb.component';
 import { IdentifyselfflashComponent } from './Components/identifyselfflash/identifyselfflash.component';
 import { IdentifydeckComponent } from './Components/identifydeck/identifydeck.component';
+import { CurbcalComponent } from './Components/curbcal/curbcal.component';
+import { SelfcalComponent } from './Components/selfcal/selfcal.component';
+import { DeckcalComponent } from './Components/deckcal/deckcal.component';
+
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +32,17 @@ import { IdentifydeckComponent } from './Components/identifydeck/identifydeck.co
     ContactComponent,
     IdentifycurbComponent,
     IdentifyselfflashComponent,
-    IdentifydeckComponent
+    IdentifydeckComponent,
+    CurbcalComponent,
+    SelfcalComponent,
+    DeckcalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
