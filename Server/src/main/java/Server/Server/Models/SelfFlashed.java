@@ -15,7 +15,6 @@ public class SelfFlashed {
     private Integer id_selfflashed;
     private String selfflashed_code;
     private String size_code;
-    private Integer glass_code;
     private Float outside_frame_width;
     private Float outside_frame_height;
     private Float rough_opening_width;
@@ -44,14 +43,6 @@ public class SelfFlashed {
 
     public void setSize_code(String size_code) {
         this.size_code = size_code;
-    }
-
-    public Integer getGlass_code() {
-        return glass_code;
-    }
-
-    public void setGlass_code(Integer glass_code) {
-        this.glass_code = glass_code;
     }
 
     public Float getOutside_frame_width() {

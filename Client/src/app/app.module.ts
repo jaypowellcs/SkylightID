@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,8 @@ import { SelfcalComponent } from './Components/selfcal/selfcal.component';
 import { DeckcalComponent } from './Components/deckcal/deckcal.component';
 
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CurbsizeComponent } from './Components/curbsize/curbsize.component';
+import { NocurbComponent } from './Components/nocurb/nocurb.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
     IdentifydeckComponent,
     CurbcalComponent,
     SelfcalComponent,
-    DeckcalComponent
+    DeckcalComponent,
+    CurbsizeComponent,
+    NocurbComponent
   ],
   imports: [
     BrowserModule,

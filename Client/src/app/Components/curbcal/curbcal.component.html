@@ -17,25 +17,28 @@
         src="../../../assets/measurecurb.jpg"
         alt="Photo showcasing where to measure a curb-mounted skylight"
       />
-      <form (ngSubmit)="onSubmit()">
+      <form 
+      (ngSubmit)="onSubmit()"
+      [formGroup]="measurementForm"
+      >
         <div
           class="flex flex-col align-middle p-3 static"
           [ngClass]="{ hidden: showMenu, flex: !showMenu }"
-          [formGroup]="measurementForm"
+         
         >
           <div class="w-full md:w-3/4 px-3">
             <label
               class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-ocdw"
+              for="ocdw"
             >
               Outside Curb Dimension Width
             </label>
             <input
               class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-ocdw"
-              type="string"
+              id="ocdw"
+              type="number"
               placeholder="OCD in inches"
-              step=".003"
+              step=".0001"
               required
               formControlName="ocdw"
             />
@@ -49,10 +52,10 @@
             </label>
             <input
               class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-ocdh"
-              type="string"
+              id="ocdh"
+              type="number"
               placeholder="OCD in inches"
-              step=".003"
+              step=".0001"
               formControlName="ocdh"
             />
           </div>
@@ -60,13 +63,14 @@
           <button
             class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"
             type="submit"
+            [disabled]="!measurementForm.valid"
           >
             Submit
           </button>
         </div>
         </div>
         <div
-        [ngClass]="{ hidden: !showMenu, flex: showMenu }"
+        *ngIf="showCurbSize"
         >
         <div>
           <p>A standard Velux Skylight will fit your outside curb dimension.
@@ -74,10 +78,7 @@
              OCD is smaller then {{curbMount?.outside_curb_width}} and {{curbMount?.outside_curb_height}},
              you will need to furr out your curb to those dimensions. 
             </p>
-            <p [ngClass]="{ hidden: !noskylightcanfit, flex: noskylightcanfit }">
-              There is no standard skylight that will fit. You will have to go to a 
-              custom model. 
-            </p>
+           
         </div>
         <button
           class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"

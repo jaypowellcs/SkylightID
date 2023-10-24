@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CurbmountService } from 'src/app/Services/curbmount.service';
 import { CurbMount } from 'src/app/Models/curbmount.model';
 
@@ -15,29 +15,27 @@ export class CurbcalComponent {
   curbMount?: CurbMount;
 
   measurementForm = new FormGroup({
-    ocdw: new FormControl(''),
-    ocdh: new FormControl(''),
+    ocdw: new FormControl('', Validators.required),
+    ocdh: new FormControl('', Validators.required),
   });
 
   submitted = false;
   showMenu = false;
-  showCustom = false;
-  noskylightcanfit = false; 
+  showCurbSize = false; 
+  elseBlock = false; 
+
 
   onSubmit() {
     this.submitted = true;
     this.showMenu = !this.showMenu;
-    this.showCustom = !this.showCustom;
     
     let ocdh = Number(this.measurementForm.value.ocdh);
     let ocdw = Number(this.measurementForm.value.ocdw);
     
     this.whichCurb(ocdw, ocdh);
     console.log(this.whichCurb(ocdw, ocdh));
-    if(this.whichCurb(ocdw, ocdh) === null) {
-      this.showCustom = !this.showCustom;
-    }
     this.measurementForm.reset();
+    this.showCurbSize = false;  
   }
 
   whichCurb(a: any, b: any) {
@@ -62,6 +60,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -153,8 +152,9 @@ export class CurbcalComponent {
         },
         error: (e) => console.error(e),
       });
-    } else{
-      return a; 
+    } else {
+      this.elseBlock = true; 
+      console.log(this.elseBlock);
     }
   } 
 }
