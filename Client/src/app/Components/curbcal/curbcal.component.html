@@ -17,14 +17,10 @@
         src="../../../assets/measurecurb.jpg"
         alt="Photo showcasing where to measure a curb-mounted skylight"
       />
-      <form 
-      (ngSubmit)="onSubmit()"
-      [formGroup]="measurementForm"
-      >
+      <form (ngSubmit)="onSubmit()" [formGroup]="measurementForm">
         <div
           class="flex flex-col align-middle p-3 static"
           [ngClass]="{ hidden: showMenu, flex: !showMenu }"
-         
         >
           <div class="w-full md:w-3/4 px-3">
             <label
@@ -60,33 +56,42 @@
             />
           </div>
           <div class="w-full md:w-3/4 px-3">
+            <button
+              class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"
+              type="submit"
+              [disabled]="!measurementForm.valid"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <div *ngIf="showCurbSize" >
+          <div>
+            <p>
+              A standard Velux Skylight will fit your outside curb dimension.
+              FCM {{ curbMount?.size_code }} will be what you need to use. If
+              your OCD is smaller then {{ curbMount?.outside_curb_width }} and
+              {{ curbMount?.outside_curb_height }}, you will need to furr out
+              your curb to those dimensions.
+            </p>
+          </div>
           <button
             class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"
-            type="submit"
-            [disabled]="!measurementForm.valid"
+            type="button"
+            (click)="onReset()"
           >
-            Submit
+            Reset
           </button>
         </div>
+        <div *ngIf="test">test
+          <button
+            class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"
+            type="button"
+            (click)="onReset()"
+          >
+            Reset
+          </button>
         </div>
-        <div
-        *ngIf="showCurbSize"
-        >
-        <div>
-          <p>A standard Velux Skylight will fit your outside curb dimension.
-             FCM {{ curbMount?.size_code }} will be what you need to use. If your
-             OCD is smaller then {{curbMount?.outside_curb_width}} and {{curbMount?.outside_curb_height}},
-             you will need to furr out your curb to those dimensions. 
-            </p>
-           
-        </div>
-        <button
-          class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"
-          type="submit"
-        >
-          Reset
-        </button>
-      </div>
       </form>
     </div>
   </div>

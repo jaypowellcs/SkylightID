@@ -23,6 +23,7 @@ export class CurbcalComponent {
   showMenu = false;
   showCurbSize = false; 
   elseBlock = false; 
+  test = false; 
 
 
   onSubmit() {
@@ -33,9 +34,16 @@ export class CurbcalComponent {
     let ocdw = Number(this.measurementForm.value.ocdw);
     
     this.whichCurb(ocdw, ocdh);
-    console.log(this.whichCurb(ocdw, ocdh));
+    console.log(this.whichCurb(ocdw, ocdh)); 
     this.measurementForm.reset();
-    this.showCurbSize = false;  
+    this.showCurbSize = false;
+  }
+
+  onReset() {
+    this.test = false; 
+    this.submitted = true;
+    this.showMenu = !this.showMenu;
+    this.showCurbSize = false;
   }
 
   whichCurb(a: any, b: any) {
@@ -153,8 +161,7 @@ export class CurbcalComponent {
         error: (e) => console.error(e),
       });
     } else {
-      this.elseBlock = true; 
-      console.log(this.elseBlock);
+      this.test = true; 
     }
   } 
 }
