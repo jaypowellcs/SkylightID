@@ -22,8 +22,7 @@ export class CurbcalComponent {
   submitted = false;
   showMenu = false;
   showCurbSize = false; 
-  elseBlock = false; 
-  test = false; 
+  customCurb = false; 
 
 
   onSubmit() {
@@ -40,7 +39,7 @@ export class CurbcalComponent {
   }
 
   onReset() {
-    this.test = false; 
+    this.customCurb = false; 
     this.submitted = true;
     this.showMenu = !this.showMenu;
     this.showCurbSize = false;
@@ -52,6 +51,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -60,6 +60,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -77,6 +78,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -85,6 +87,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -93,6 +96,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -101,6 +105,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -109,6 +114,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -117,6 +123,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -125,6 +132,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -133,6 +141,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -141,6 +150,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -149,6 +159,7 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
@@ -157,11 +168,12 @@ export class CurbcalComponent {
         next: (data) => {
           this.curbMount = data;
           console.log(data);
+          this.showCurbSize = true; 
         },
         error: (e) => console.error(e),
       });
     } else {
-      this.test = true; 
+      this.customCurb = true; 
     }
   } 
 }

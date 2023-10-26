@@ -19,8 +19,7 @@ import { SelfcalComponent } from './Components/selfcal/selfcal.component';
 import { DeckcalComponent } from './Components/deckcal/deckcal.component';
 
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { CurbsizeComponent } from './Components/curbsize/curbsize.component';
-import { NocurbComponent } from './Components/nocurb/nocurb.component';
+
 
 
 @NgModule({
@@ -38,8 +37,6 @@ import { NocurbComponent } from './Components/nocurb/nocurb.component';
     CurbcalComponent,
     SelfcalComponent,
     DeckcalComponent,
-    CurbsizeComponent,
-    NocurbComponent
   ],
   imports: [
     BrowserModule,

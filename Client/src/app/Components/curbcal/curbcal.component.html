@@ -67,11 +67,11 @@
         </div>
         <div *ngIf="showCurbSize" >
           <div>
-            <p>
+            <p class="text-justify p-2">
               A standard Velux Skylight will fit your outside curb dimension.
               FCM {{ curbMount?.size_code }} will be what you need to use. If
-              your OCD is smaller then {{ curbMount?.outside_curb_width }} and
-              {{ curbMount?.outside_curb_height }}, you will need to furr out
+              your OCD is smaller then {{ curbMount?.outside_curb_width }}" and
+              {{ curbMount?.outside_curb_height }}", you will need to furr out
               your curb to those dimensions.
             </p>
           </div>
@@ -83,7 +83,10 @@
             Reset
           </button>
         </div>
-        <div *ngIf="test">test
+        <div *ngIf="customCurb">
+          <p class="text-justify p-2">
+            Velux does not offer a standard skylight for this size, you will need to order a custom skylight. 
+          </p>
           <button
             class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 m-4 rounded"
             type="button"
