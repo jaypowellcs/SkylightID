@@ -20,8 +20,4 @@ export class CurbmountService {
   get(id_curbmount: any): Observable<CurbMount> {
     return this.http.get(`${baseUrl}/${id_curbmount}`);
   }
-
-  submitApplication(ocdw: number, ocdh: number) {
-    console.log(`Homes application received: firstName: ${ocdw}, lastName: ${ocdh}.`);
-  }
 }
