@@ -17,7 +17,9 @@ Website built with Angular/Spring Boot/Mysql to help contractors identify and me
       - Tailwindcss
       - Spring Boot
 ## Screenshots
-![portfolio1](https://user-images.githubusercontent.com/60851811/173251310-4bc578fa-d49e-4c57-bfa9-4b1a1bbef169.png)
+![Home](https://github.com/jaypowellcs/SkylightId/assets/60851811/10788f16-082a-4c9a-8f39-e502951015e5)
+![Home](https://github.com/jaypowellcs/SkylightId/assets/60851811/e1b2f6da-9464-44ec-9882-5368e710172f)
+
 ## Features
   - Skylight Calculator
   - Identify Skylight Page
