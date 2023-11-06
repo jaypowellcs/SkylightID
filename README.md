@@ -18,10 +18,10 @@ Website built with Angular/Spring Boot/Mysql to help contractors identify and me
       - Spring Boot
 ## Screenshots
 
-###Home Screen
+### Home Screen
 ![Home](https://github.com/jaypowellcs/SkylightId/assets/60851811/10788f16-082a-4c9a-8f39-e502951015e5)
 
-###Skylight Curb-Mounted Calculator
+### Skylight Curb-Mounted Calculator
 ![CurbMount](https://github.com/jaypowellcs/SkylightId/assets/60851811/dfa68c09-5ea1-4093-85e3-cc6a858c5ea0)
 
 
