@@ -6,6 +6,7 @@ import { CurbMount } from 'src/app/Models/curbmount.model';
   selector: 'app-identifycurb',
   templateUrl: './identifycurb.component.html',
   styleUrls: ['./identifycurb.component.css'],
+  
 })
 export class IdentifycurbComponent implements OnInit {
   curbMount?: CurbMount[];
